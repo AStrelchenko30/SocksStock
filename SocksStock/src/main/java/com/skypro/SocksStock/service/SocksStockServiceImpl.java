@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -28,7 +29,7 @@ public class SocksStockServiceImpl implements SocksStockService {
     @Override
     public int getQuantityOfSocksBy(String color, Integer cottonPart) {
         Optional<SocksStock> socksStocks = socksStockRepository.findByColorNameAndCottonPart(color, cottonPart);
-        List<SocksStock> socksStocksList = socksStocks.stream().toList();
+        List<SocksStock> socksStocksList = socksStocks.stream().collect(Collectors.toList());
         return socksStocksList.size() + 1;
     }
 

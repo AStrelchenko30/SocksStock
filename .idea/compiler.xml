@@ -22,7 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SocksStock" target="17" />
+      <module name="SocksStock" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
